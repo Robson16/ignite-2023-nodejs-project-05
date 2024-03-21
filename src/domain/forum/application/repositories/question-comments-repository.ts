@@ -4,6 +4,7 @@ import { CommentWithAuthor } from '../../enterprise/entities/value-objects/comme
 
 export abstract class QuestionCommentsRepository {
   abstract findById(id: string): Promise<QuestionComment | null>
+
   abstract findManyByQuestionId(
     questionId: string,
     params: PaginationParams,
