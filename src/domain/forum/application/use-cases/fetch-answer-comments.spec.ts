@@ -7,7 +7,7 @@ import { FetchAnswerCommentsUseCase } from './fetch-answer-comments'
 
 let inMemoryStudentsRepository: InMemoryStudentsRepository
 let inMemoryAnswerCommentsRepository: InMemoryAnswerCommentsRepository
-let sut: FetchAnswerCommentsUseCase
+let sut: FetchAnswerCommentsUseCase // Subject Under Test
 
 describe('Fetch Answer Comments', () => {
   beforeEach(() => {
@@ -15,8 +15,6 @@ describe('Fetch Answer Comments', () => {
     inMemoryAnswerCommentsRepository = new InMemoryAnswerCommentsRepository(
       inMemoryStudentsRepository,
     )
-
-    // Subject Under Test
     sut = new FetchAnswerCommentsUseCase(inMemoryAnswerCommentsRepository)
   })
 

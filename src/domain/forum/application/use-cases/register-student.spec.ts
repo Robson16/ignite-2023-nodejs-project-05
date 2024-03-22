@@ -10,7 +10,6 @@ describe('Register Student', () => {
   beforeEach(() => {
     inMemoryStudentsRepository = new InMemoryStudentsRepository()
     fakeHasher = new FakeHasher()
-
     sut = new RegisterStudentUseCase(inMemoryStudentsRepository, fakeHasher)
   })
 

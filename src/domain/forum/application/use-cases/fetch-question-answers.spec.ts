@@ -6,7 +6,7 @@ import { FetchQuestionAnswersUseCase } from './fetch-question-answers'
 
 let inMemoryAnswerAttachmentsRepository: InMemoryAnswerAttachmentsRepository
 let inMemoryAnswersRepository: InMemoryAnswersRepository
-let sut: FetchQuestionAnswersUseCase
+let sut: FetchQuestionAnswersUseCase // Subject Under Test
 
 describe('Fetch Question Answers', () => {
   beforeEach(() => {
@@ -15,8 +15,6 @@ describe('Fetch Question Answers', () => {
     inMemoryAnswersRepository = new InMemoryAnswersRepository(
       inMemoryAnswerAttachmentsRepository,
     )
-
-    // Subject Under Test
     sut = new FetchQuestionAnswersUseCase(inMemoryAnswersRepository)
   })
 

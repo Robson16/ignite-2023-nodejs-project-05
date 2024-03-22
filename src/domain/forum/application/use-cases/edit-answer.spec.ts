@@ -8,7 +8,7 @@ import { EditAnswerUseCase } from './edit-answer'
 
 let inMemoryAnswerAttachmentsRepository: InMemoryAnswerAttachmentsRepository
 let inMemoryAnswersRepository: InMemoryAnswersRepository
-let sut: EditAnswerUseCase
+let sut: EditAnswerUseCase // Subject Under Test
 
 describe('Edit Answer', () => {
   beforeEach(() => {
@@ -17,8 +17,6 @@ describe('Edit Answer', () => {
     inMemoryAnswersRepository = new InMemoryAnswersRepository(
       inMemoryAnswerAttachmentsRepository,
     )
-
-    // Subject Under Test
     sut = new EditAnswerUseCase(
       inMemoryAnswersRepository,
       inMemoryAnswerAttachmentsRepository,

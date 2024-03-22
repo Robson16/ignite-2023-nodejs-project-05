@@ -8,7 +8,7 @@ import { DeleteAnswerUseCase } from './delete-answer'
 
 let inMemoryAnswerAttachmentsRepository: InMemoryAnswerAttachmentsRepository
 let inMemoryAnswersRepository: InMemoryAnswersRepository
-let sut: DeleteAnswerUseCase
+let sut: DeleteAnswerUseCase // Subject Under Test
 
 describe('Delete Answer', () => {
   beforeEach(() => {
@@ -17,8 +17,6 @@ describe('Delete Answer', () => {
     inMemoryAnswersRepository = new InMemoryAnswersRepository(
       inMemoryAnswerAttachmentsRepository,
     )
-
-    // Subject Under Test
     sut = new DeleteAnswerUseCase(inMemoryAnswersRepository)
   })
 
